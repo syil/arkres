@@ -182,7 +182,7 @@ jQuery(function(){
 				<p>
 					<a href="http://twitter.com/share" class="twitter-share-button" 
 						data-count="horizontal" data-via="arkaplanresmi" data-related="sinanyil:Site owner">Tweet</a>
-					<iframe src="http://www.facebook.com/plugins/like.php?app_id=213235068717480&amp;href&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21" 
+					<iframe src="http://www.facebook.com/plugins/like.php?app_id=213235068717480&href&send=false&layout=button_count&width=450&show_faces=false&action=like&colorscheme=light&font=trebuchet+ms&height=21" 
 						scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
 				</p>
 				<!------------------------>
