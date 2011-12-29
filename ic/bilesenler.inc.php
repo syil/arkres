@@ -66,10 +66,10 @@ function bilesen_kategoriler()
 
 function bilesen_cozunurluk_secici()
 {
-	global $Ayarlar;
+	global $coz;
 ?>
 	<h3><?php _e("İndirme Çözünürlüğü"); ?></h3>
-	<p id="selected_res"><span><?php echo $_COOKIE[$Ayarlar->Kullanici->CozunurlukCerezi]; ?></span><a href="#"><?php _e("Değiştir"); ?></a></p>
+	<p id="selected_res"><span><?php echo $coz; ?></span><a href="#"><?php _e("Değiştir"); ?></a></p>
 	<div class="res_selection">
 		<?php 
 			$cozunurlukler = Cozunurluk::BilinenCozunurlukler();

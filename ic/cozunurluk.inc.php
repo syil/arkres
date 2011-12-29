@@ -1,6 +1,8 @@
 <?php
 class Cozunurluk
 {
+	public static $Bos = NULL;
+	
 	private static $_cozunurlukler = array();
 	
 	public $Genislik;
@@ -172,4 +174,6 @@ class Oran
 		return sprintf('%01.2f', $a);
 	}
 }
+
+Cozunurluk::$Bos = new Cozunurluk('-1x-1');
 ?>
