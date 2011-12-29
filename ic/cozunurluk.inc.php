@@ -1,6 +1,8 @@
 <?php
 class Cozunurluk
 {
+	public $Bos = new Cozunurluk("-1x-1");
+	
 	private static $_cozunurlukler = array();
 	
 	public $Genislik;

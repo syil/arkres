@@ -35,16 +35,10 @@ jQuery(document).ready(function(){
 	});
 	
 	jQuery('.change_res').click(function(){		// change resolution
-		var new_res = jQuery(this).find(".res").text(),
-			selected_res = jQuery("#selected_res span");
+		var new_res = jQuery(this).find(".res").text();
+		changeResolution(new_res);
 		
-		jQuery('.download_link').each(function(){
-			jQuery(this).attr("href", jQuery(this).attr("href").replace(selected_res.text(), new_res));
-		});
-		
-		selected_res.text(new_res);
 		jQuery('.res_selection').slideUp(250);
-		jQuery.cookie(cozunurluk_cerezi, new_res, { expires: 7});
 		smooth_scroll(jQuery("#top").offset().top);
 		
 		return false;
@@ -66,7 +60,7 @@ jQuery(document).ready(function(){
 	});
 	
 	pixelperfect();
-	
+	changeResolution("-1x-1");
 // -------------------------------------------------------------------------------------------
 // END EDITING HERE
 // -------------------------------------------------------------------------------------------		
@@ -1224,4 +1218,16 @@ function pixelperfect()
 		jQuery('input').css({"border-radius":0});
 	}
 
+}
+
+function changeResolution(new_res) {
+	var selected_res = jQuery("#selected_res span");
+	
+	jQuery('.download_link').each(function(){
+		jQuery(this).attr("href", jQuery(this).attr("href").replace(selected_res.text(), new_res));
+	});
+	
+	selected_res.text(new_res);
+	jQuery.cookie(cozunurluk_cerezi, new_res, { expires: 7 });
+	
 }

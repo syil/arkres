@@ -33,6 +33,8 @@ KullaniciIslemleri::CerezdenKullanici(); // $Kullanici adında global değişken
 
 if (isset($_COOKIE[$Ayarlar->Kullanici->CozunurlukCerezi]))
 	$coz = new Cozunurluk($_COOKIE[$Ayarlar->Kullanici->CozunurlukCerezi]);
+else
+	$coz = Cozunurluk::$Bos;
 
 $KullaniciSeviyeleri = array(
 	3 => "Üst Yönetici", 
