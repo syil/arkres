@@ -2,7 +2,6 @@
 class Cozunurluk
 {
 	public static $Bos = NULL;
-	
 	private static $_cozunurlukler = array();
 	
 	public $Genislik;

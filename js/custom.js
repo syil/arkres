@@ -1224,7 +1224,6 @@ function pixelperfect()
 
 function changeResolution(new_res) {
 	var selected_res = jQuery("#selected_res span");
-	alert(selected_res.text())
 	
 	jQuery('.download_link').each(function(){
 		jQuery(this).attr("href", jQuery(this).attr("href").replace(selected_res.text(), new_res));
