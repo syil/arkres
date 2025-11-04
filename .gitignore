@@ -1,0 +1,28 @@
+# Veritabanı yapılandırma dosyası
+veri/ayarlar.json
+
+# Yüklenen dosyalar ve resimler
+uploads/
+images/uploaded/
+
+# Docker volumes
+mysql_data/
+
+# IDE ve editör dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+*.log
+
+# Geçici dosyalar
+tmp/
+temp/
+cache/
