@@ -310,11 +310,13 @@ function kategorileri_al()
 {
 	global $vt;
 	$vt->SorguAta("SELECT * FROM kategoriler ORDER BY tam_ad ASC");
-	$vt->SatirlariAl($v);
-	return $v;
+	if ($vt->SatirlariAl($v)) {
+		return $v;
+	}
+	return array();
 }
 
-function galeri_kategorisi_bul($galeri)
+function galeri_kategorisi_bul($galeri, $kategoriler = null)
 {
 	// Get gallery tags
 	$etiketler = $galeri->Etiketler();
@@ -323,8 +325,10 @@ function galeri_kategorisi_bul($galeri)
 		return "Genel";
 	}
 	
-	// Get all categories
-	$kategoriler = kategorileri_al();
+	// Get all categories (use cached version if provided)
+	if ($kategoriler === null) {
+		$kategoriler = kategorileri_al();
+	}
 	
 	// Check if categories exist and if any tag matches a category short name
 	if (!empty($kategoriler)) {

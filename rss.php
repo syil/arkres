@@ -3,6 +3,7 @@ require_once "ic/sistem.php";
 
 $galeriler = GaleriIslemleri::GalerileriAl(NULL, "eklenme_tarihi DESC");
 $galeriler = array_slice($galeriler, 0, 10);
+$kategoriler = kategorileri_al(); // Cache categories to avoid repeated DB queries
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 ?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
@@ -29,7 +30,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
 			<description>&lt;img src="<?php echo $Ayarlar->Genel->SiteAdresi."/".$galeri->RastgeleResim()->KucukResim; ?>" border="0" align="left" width="180" height="135" /&gt;<?php echo htmlspecialchars($galeri->Yazi); ?></description>
 			<link><?php echo htmlspecialchars($Ayarlar->Genel->SiteAdresi.galeri_link($galeri, true)); ?></link>
 			<pubDate><?php echo date("r", strtotime($galeri->EklenmeTarihi)); ?></pubDate>
-			<category><?php echo htmlspecialchars(galeri_kategorisi_bul($galeri)); ?></category>
+			<category><?php echo htmlspecialchars(galeri_kategorisi_bul($galeri, $kategoriler)); ?></category>
 			<author>Gönderen: <?php echo $galeri->Ekleyen()->Isim; ?></author>
 			<dc:creator>Gönderen: <?php echo $galeri->Ekleyen()->Isim; ?></dc:creator>
 			<dc:date><?php echo date("c", strtotime($galeri->EklenmeTarihi)); ?>Z</dc:date>
