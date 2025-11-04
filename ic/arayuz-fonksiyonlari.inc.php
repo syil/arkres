@@ -181,4 +181,23 @@ function sayfalama($suan, $toplam)
 	echo "</div>";
 }
 
+function get_gtm_body() {
+	global $Ayarlar;
+	
+	if (!isset($Ayarlar->GoogleTagManager) || 
+	    !$Ayarlar->GoogleTagManager->Aktif || 
+	    empty($Ayarlar->GoogleTagManager->ContainerID)) {
+		return "";
+	}
+	
+	$containerID = htmlspecialchars($Ayarlar->GoogleTagManager->ContainerID);
+	
+	return <<<GTM
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={$containerID}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+GTM;
+}
+
 ?>

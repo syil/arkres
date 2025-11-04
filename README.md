@@ -99,6 +99,25 @@ Veritabanı ayarları `veri/ayarlar.json` dosyasında bulunur:
 }
 ```
 
+### Google Tag Manager Entegrasyonu
+
+Google Tag Manager (GTM) desteği dinamik olarak yapılandırılabilir. `veri/ayarlar.json` dosyasına aşağıdaki bölümü ekleyerek GTM'i etkinleştirebilirsiniz:
+
+```json
+{
+  "GoogleTagManager": {
+    "Aktif": true,
+    "ContainerID": "GTM-XXXXXXX"
+  }
+}
+```
+
+**Parametreler:**
+- `Aktif`: GTM'in etkin olup olmadığını belirtir (true/false)
+- `ContainerID`: Google Tag Manager container kimliğiniz (örn: "GTM-BRR9")
+
+GTM devre dışı bırakmak için `Aktif` değerini `false` yapabilir veya bu bölümü tamamen kaldırabilirsiniz.
+
 ### Port Değiştirme
 
 Eğer 80 portu kullanımda ise, `docker-compose.yml` dosyasındaki web servisi portunu değiştirebilirsiniz:
