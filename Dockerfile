@@ -23,9 +23,6 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 # Apache mod_rewrite'ı etkinleştir
 RUN a2enmod rewrite
 
-# Apache yapılandırması - port 80'i dinle
-RUN sed -i 's/Listen 80/Listen 80/g' /etc/apache2/ports.conf
-
 # .htaccess dosyalarının çalışması için AllowOverride'ı etkinleştir
 RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
 

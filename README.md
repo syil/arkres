@@ -76,8 +76,10 @@ docker compose logs -f db
 ### MySQL'e Bağlanmak
 
 ```bash
-docker exec -it arkres_mysql mysql -u arkres_user -parkres_password arkres_db
+docker exec -it arkres_mysql mysql -u arkres_user -p arkres_db
 ```
+
+(Şifre sorulduğunda: `arkres_password`)
 
 ## Yapılandırma
 
