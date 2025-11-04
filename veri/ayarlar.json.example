@@ -1,0 +1,19 @@
+{
+  "Genel": {
+    "SiteAdi": "Arkres",
+    "SiteSlogan": "Arkaplan Resimleri",
+    "SiteAciklamasi": "Ücretsiz arkaplan resimleri paylaşım sitesi",
+    "AnahtarKelimeler": "arkaplan, resim, wallpaper, duvar kağıdı",
+    "SiteDili": "tr_TR.UTF-8"
+  },
+  "Veritabani": {
+    "Sunucu": "db",
+    "KullaniciAdi": "arkres_user",
+    "Sifre": "arkres_password",
+    "VtAdi": "arkres_db",
+    "KarakterSeti": "utf8"
+  },
+  "Kullanici": {
+    "CozunurlukCerezi": "arkres_cozunurluk"
+  }
+}

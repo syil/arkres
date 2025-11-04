@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # MySQL Veritabanı Servisi
+  db:
+    image: mysql:5.7
+    container_name: arkres_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: arkres_db
+      MYSQL_USER: arkres_user
+      MYSQL_PASSWORD: arkres_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "3306:3306"
+    networks:
+      - arkres_network
+
+  # PHP + Apache Web Servisi
+  web:
+    build: .
+    container_name: arkres_web
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./veri:/var/www/html/veri
+    networks:
+      - arkres_network
+    environment:
+      - DB_HOST=db
+      - DB_USER=arkres_user
+      - DB_PASSWORD=arkres_password
+      - DB_NAME=arkres_db
+
+networks:
+  arkres_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
