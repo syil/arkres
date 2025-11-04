@@ -15,5 +15,9 @@
   },
   "Kullanici": {
     "CozunurlukCerezi": "arkres_cozunurluk"
+  },
+  "GoogleTagManager": {
+    "Aktif": true,
+    "ContainerID": "GTM-XXXXXXX"
   }
 }
