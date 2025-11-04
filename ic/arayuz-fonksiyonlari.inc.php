@@ -181,19 +181,6 @@ function sayfalama($suan, $toplam)
 	echo "</div>";
 }
 
-function get_gtm_head() {
-	global $Ayarlar;
-	
-	if (!isset($Ayarlar->GoogleTagManager) || 
-	    !$Ayarlar->GoogleTagManager->Aktif || 
-	    empty($Ayarlar->GoogleTagManager->ContainerID)) {
-		return "";
-	}
-	
-	$containerID = htmlspecialchars($Ayarlar->GoogleTagManager->ContainerID);
-	return "";
-}
-
 function get_gtm_body() {
 	global $Ayarlar;
 	
