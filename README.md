@@ -7,7 +7,15 @@ Bu proje PHP ve MySQL kullanarak çalışan bir arkaplan resimleri paylaşım uy
 - Docker
 - Docker Compose
 
-## Kurulum Adımları
+## Hızlı Başlangıç
+
+Hızlı başlatma scripti ile tek komutta kurulum yapabilirsiniz:
+
+```bash
+./start.sh
+```
+
+## Kurulum Adımları (Manuel)
 
 ### 1. Yapılandırma Dosyasını Oluşturun
 
@@ -22,7 +30,7 @@ Gerekirse `veri/ayarlar.json` dosyasındaki ayarları düzenleyin.
 ### 2. Docker Container'ları Başlatın
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Bu komut:
@@ -43,26 +51,26 @@ http://localhost
 ### Container'ları Durdurmak
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### Container'ları Yeniden Başlatmak
 
 ```bash
-docker-compose restart
+docker compose restart
 ```
 
 ### Logları Görüntülemek
 
 ```bash
 # Tüm servislerin logları
-docker-compose logs -f
+docker compose logs -f
 
 # Sadece web servisi
-docker-compose logs -f web
+docker compose logs -f web
 
 # Sadece veritabanı
-docker-compose logs -f db
+docker compose logs -f db
 ```
 
 ### MySQL'e Bağlanmak
