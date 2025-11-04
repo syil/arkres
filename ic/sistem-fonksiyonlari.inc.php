@@ -326,11 +326,13 @@ function galeri_kategorisi_bul($galeri)
 	// Get all categories
 	$kategoriler = kategorileri_al();
 	
-	// Check if any tag matches a category short name
-	foreach ($etiketler as $etiket) {
-		foreach ($kategoriler as $kategori) {
-			if (strcasecmp($etiket, $kategori["kisa_ad"]) == 0) {
-				return $kategori["tam_ad"];
+	// Check if categories exist and if any tag matches a category short name
+	if (!empty($kategoriler)) {
+		foreach ($etiketler as $etiket) {
+			foreach ($kategoriler as $kategori) {
+				if (strcasecmp($etiket, $kategori["kisa_ad"]) == 0) {
+					return $kategori["tam_ad"];
+				}
 			}
 		}
 	}
