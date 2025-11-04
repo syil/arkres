@@ -314,6 +314,31 @@ function kategorileri_al()
 	return $v;
 }
 
+function galeri_kategorisi_bul($galeri)
+{
+	// Get gallery tags
+	$etiketler = $galeri->Etiketler();
+	
+	if (empty($etiketler)) {
+		return "Genel";
+	}
+	
+	// Get all categories
+	$kategoriler = kategorileri_al();
+	
+	// Check if any tag matches a category short name
+	foreach ($etiketler as $etiket) {
+		foreach ($kategoriler as $kategori) {
+			if (strcasecmp($etiket, $kategori["kisa_ad"]) == 0) {
+				return $kategori["tam_ad"];
+			}
+		}
+	}
+	
+	// If no match found, return default category
+	return "Genel";
+}
+
 function ulkeleri_al()
 {
 	global $vt;
