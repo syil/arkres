@@ -22,7 +22,7 @@ function resim_indir($resim_id, $coz, $indir = true)
 		global $Ayarlar;
 		$resim = ResimIslemleri::Al($resim_id);
 		
-		$dosya_ismi = str2url($resim->Galeri()->Baslik). "_" .$coz. ".jpg";
+		$dosya_ismi = str2url($resim->Galeri()->Baslik). "_" . $resim_id . "_" .$coz. ".jpg";
 		$onbellek = $Ayarlar->Resim->OnbellekKlasoru . $dosya_ismi;
 		
 		header("Content-Type: image/jpeg");
