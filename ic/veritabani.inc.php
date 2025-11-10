@@ -12,10 +12,9 @@ class Veritabani
 	
 	public function Veritabani($Host, $KullaniciAdi, $Sifre, $VeritabaniAdi, $KarakterSeti = "utf8")
 	{
-		$this->_Identifier = mysql_connect($Host, $KullaniciAdi, $Sifre);
+		$this->_Identifier = mysqli_connect($Host, $KullaniciAdi, $Sifre, $VeritabaniAdi);
 		if($this->_Identifier)
 		{
-			mysql_select_db($VeritabaniAdi, $this->_Identifier);
 			$this->Gunlukle("Bağlantı kuruldu");
 		}
 		else
@@ -24,9 +23,9 @@ class Veritabani
 			$this->Gunlukle("Bağlantı kurulamadı");
 		}
 		
-		mysql_query("SET NAMES '". $KarakterSeti ."'", $this->_Identifier);
-		mysql_query("SET CHARACTER SET ". $KarakterSeti, $this->_Identifier);
-		mysql_query("SET lc_time_names = 'tr_TR'");
+		mysqli_query($this->_Identifier, "SET NAMES '". $KarakterSeti ."'");
+		mysqli_query($this->_Identifier, "SET CHARACTER SET ". $KarakterSeti);
+		mysqli_query($this->_Identifier, "SET lc_time_names = 'tr_TR'");
 	}
 	
 	public function SorguAta($Sorgu, $Sinir = false, $Baslangic = false)
@@ -50,7 +49,7 @@ class Veritabani
 		$Nesne = NULL;
 		if($this->Calistir())
 		{
-			$Nesne = mysql_fetch_array($this->_MysqlResource);
+			$Nesne = mysqli_fetch_array($this->_MysqlResource);
 			return true;
 		}
 		else
@@ -62,7 +61,8 @@ class Veritabani
 		$Degisken = NULL;
 		if($this->Calistir())
 		{
-			$Degisken = mysql_result($this->_MysqlResource, 0);
+			$row = mysqli_fetch_array($this->_MysqlResource, MYSQLI_NUM);
+			$Degisken = $row ? $row[0] : NULL;
 			return true;
 		}
 		else
@@ -74,7 +74,7 @@ class Veritabani
 		$Dizi = array();
 		if($this->Calistir())
 		{
-			while($row = mysql_fetch_array($this->_MysqlResource))
+			while($row = mysqli_fetch_array($this->_MysqlResource))
 				$Dizi[] = $row;
 			
 			return true;
@@ -88,7 +88,7 @@ class Veritabani
 		if($this->_Query == "" || $this->_Identifier == NULL)
 			return false;
 		
-		if($this->_MysqlResource = mysql_query($this->_Query, $this->_Identifier))
+		if($this->_MysqlResource = mysqli_query($this->_Identifier, $this->_Query))
 		{
 			$this->Gunlukle("Sorgu Çalıştırıldı : ". $this->SorguAl());
 			return true;
@@ -99,16 +99,15 @@ class Veritabani
 	
 	public function KarakterTemizle($String)
 	{
-		// if(function_exists("mysql_real_escape_string"))
-			// return mysql_real_escape_string(str_replace('\\', '\\\\', $String), $this->_Identifier);
-		// else
-			// return mysql_escape_string(str_replace('\\', '\\\\', $String));
-		return $String;
+		if($this->_Identifier)
+			return mysqli_real_escape_string($this->_Identifier, $String);
+		else
+			return $String;
 	}
 	
 	public function SonEklenenID()
 	{
-		return mysql_insert_id($this->_Identifier);
+		return mysqli_insert_id($this->_Identifier);
 	}
 	
 	public function SatirSayisi()
@@ -116,14 +115,14 @@ class Veritabani
 		if($this->_MysqlResource == NULL || $this->_Identifier == NULL)
 			return false;
 		if(strpos("select", $this->_Query) === false)
-			return mysql_affected_rows($this->_Identifier);
+			return mysqli_affected_rows($this->_Identifier);
 		else
-			return mysql_num_rows($this->_MysqlResource);
+			return mysqli_num_rows($this->_MysqlResource);
 	}
 	
 	public function Kapat()
 	{
-		mysql_close($this->_Identifier);
+		mysqli_close($this->_Identifier);
 		$this->Gunlukle("Bağlantı kesildi");
 	}
 	
