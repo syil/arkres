@@ -17,6 +17,17 @@ else
     echo ""
 fi
 
+# Çözünürlükler dosyasını kontrol et
+if [ ! -f "veri/cozunurlukler.json" ]; then
+    echo "✓ Çözünürlükler dosyası oluşturuluyor..."
+    cp veri/cozunurlukler.example.json veri/cozunurlukler.json
+    echo "  veri/cozunurlukler.json oluşturuldu."
+    echo ""
+else
+    echo "✓ Çözünürlükler dosyası mevcut."
+    echo ""
+fi
+
 # Docker container'larını başlat
 echo "✓ Docker container'ları başlatılıyor..."
 docker compose up -d
