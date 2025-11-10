@@ -1,6 +1,9 @@
 # Veritabanı yapılandırma dosyası
 veri/ayarlar.json
 
+# Çözünürlükler dosyası
+veri/cozunurlukler.json
+
 # Yüklenen dosyalar ve resimler
 uploads/
 images/uploaded/

@@ -1,0 +1,158 @@
+[
+  {
+    "Genislik": 320,
+    "Yukseklik": 480,
+    "Etiket": "HVGA",
+    "Grup": "Mobil"
+  },
+  {
+    "Genislik": 480,
+    "Yukseklik": 800,
+    "Etiket": "WVGA",
+    "Grup": "Mobil"
+  },
+  {
+    "Genislik": 720,
+    "Yukseklik": 1280,
+    "Etiket": "HD",
+    "Grup": "Mobil"
+  },
+  {
+    "Genislik": 1080,
+    "Yukseklik": 1920,
+    "Etiket": "Full HD",
+    "Grup": "Mobil"
+  },
+  {
+    "Genislik": 800,
+    "Yukseklik": 1280,
+    "Etiket": "WXGA",
+    "Grup": "Tablet"
+  },
+  {
+    "Genislik": 1200,
+    "Yukseklik": 1920,
+    "Etiket": "WUXGA",
+    "Grup": "Tablet"
+  },
+  {
+    "Genislik": 1536,
+    "Yukseklik": 2048,
+    "Etiket": "QXGA",
+    "Grup": "Tablet"
+  },
+  {
+    "Genislik": 1024,
+    "Yukseklik": 768,
+    "Etiket": "XGA",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1280,
+    "Yukseklik": 720,
+    "Etiket": "HD",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1280,
+    "Yukseklik": 800,
+    "Etiket": "WXGA",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1280,
+    "Yukseklik": 1024,
+    "Etiket": "SXGA",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1366,
+    "Yukseklik": 768,
+    "Etiket": "WXGA",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1440,
+    "Yukseklik": 900,
+    "Etiket": "WXGA+",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1600,
+    "Yukseklik": 900,
+    "Etiket": "HD+",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1680,
+    "Yukseklik": 1050,
+    "Etiket": "WSXGA+",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1920,
+    "Yukseklik": 1080,
+    "Etiket": "Full HD",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 1920,
+    "Yukseklik": 1200,
+    "Etiket": "WUXGA",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 2048,
+    "Yukseklik": 1152,
+    "Etiket": "QWXGA",
+    "Grup": "Masaüstü"
+  },
+  {
+    "Genislik": 2560,
+    "Yukseklik": 1080,
+    "Etiket": "UW-FHD",
+    "Grup": "Geniş Ekran"
+  },
+  {
+    "Genislik": 2560,
+    "Yukseklik": 1440,
+    "Etiket": "QHD",
+    "Grup": "Geniş Ekran"
+  },
+  {
+    "Genislik": 2560,
+    "Yukseklik": 1600,
+    "Etiket": "WQXGA",
+    "Grup": "Geniş Ekran"
+  },
+  {
+    "Genislik": 3440,
+    "Yukseklik": 1440,
+    "Etiket": "UW-QHD",
+    "Grup": "Geniş Ekran"
+  },
+  {
+    "Genislik": 3840,
+    "Yukseklik": 2160,
+    "Etiket": "4K UHD",
+    "Grup": "4K"
+  },
+  {
+    "Genislik": 4096,
+    "Yukseklik": 2160,
+    "Etiket": "4K DCI",
+    "Grup": "4K"
+  },
+  {
+    "Genislik": 5120,
+    "Yukseklik": 2880,
+    "Etiket": "5K",
+    "Grup": "5K+"
+  },
+  {
+    "Genislik": 7680,
+    "Yukseklik": 4320,
+    "Etiket": "8K UHD",
+    "Grup": "5K+"
+  }
+]
