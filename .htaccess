@@ -1,0 +1,30 @@
+RewriteEngine On
+
+# Ana dizin içinde dosya veya klasör varsa, doğrudan eriş
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Statik dosyaları (CSS, JS, resim vb.) hariç tut
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|pdf|zip|rar|doc|docx|xls|xlsx|mp3|mp4|avi|mov|wmv|flv|swf|xml)$ [NC]
+
+# Tüm diğer istekleri index.php'ye yönlendir
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Güvenlik için bazı dosyaları koruma
+<Files ~ "\.inc\.php$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.json$">
+    Order allow,deny  
+    Deny from all
+</Files>
+
+# Yönetim paneli için özel kurallar (eğer gerekirse)
+RewriteCond %{REQUEST_URI} ^/yonetim/
+RewriteRule ^yonetim/(.*)$ yonetim/$1 [L]
+
+# AJAX istekleri için özel kurallar
+RewriteCond %{REQUEST_URI} ^/ajax/
+RewriteRule ^ajax/(.*)$ ajax/$1 [L]
