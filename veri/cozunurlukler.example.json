@@ -2,157 +2,157 @@
   {
     "Genislik": 320,
     "Yukseklik": 480,
-    "Etiket": "HVGA",
+    "Etiket": "HVGA (320x480)",
     "Grup": "Mobil"
   },
   {
     "Genislik": 480,
     "Yukseklik": 800,
-    "Etiket": "WVGA",
+    "Etiket": "WVGA (480x800)",
     "Grup": "Mobil"
   },
   {
     "Genislik": 720,
     "Yukseklik": 1280,
-    "Etiket": "HD",
+    "Etiket": "HD (720x1280)",
     "Grup": "Mobil"
   },
   {
     "Genislik": 1080,
     "Yukseklik": 1920,
-    "Etiket": "Full HD",
+    "Etiket": "Full HD (1080x1920)",
     "Grup": "Mobil"
   },
   {
     "Genislik": 800,
     "Yukseklik": 1280,
-    "Etiket": "WXGA",
+    "Etiket": "WXGA (800x1280)",
     "Grup": "Tablet"
   },
   {
     "Genislik": 1200,
     "Yukseklik": 1920,
-    "Etiket": "WUXGA",
+    "Etiket": "WUXGA (1200x1920)",
     "Grup": "Tablet"
   },
   {
     "Genislik": 1536,
     "Yukseklik": 2048,
-    "Etiket": "QXGA",
+    "Etiket": "QXGA (1536x2048)",
     "Grup": "Tablet"
   },
   {
     "Genislik": 1024,
     "Yukseklik": 768,
-    "Etiket": "XGA",
+    "Etiket": "XGA (1024x768)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1280,
     "Yukseklik": 720,
-    "Etiket": "HD",
+    "Etiket": "HD (1280x720)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1280,
     "Yukseklik": 800,
-    "Etiket": "WXGA",
+    "Etiket": "WXGA (1280x800)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1280,
     "Yukseklik": 1024,
-    "Etiket": "SXGA",
+    "Etiket": "SXGA (1280x1024)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1366,
     "Yukseklik": 768,
-    "Etiket": "WXGA",
+    "Etiket": "WXGA (1366x768)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1440,
     "Yukseklik": 900,
-    "Etiket": "WXGA+",
+    "Etiket": "WXGA+ (1440x900)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1600,
     "Yukseklik": 900,
-    "Etiket": "HD+",
+    "Etiket": "HD+ (1600x900)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1680,
     "Yukseklik": 1050,
-    "Etiket": "WSXGA+",
+    "Etiket": "WSXGA+ (1680x1050)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1920,
     "Yukseklik": 1080,
-    "Etiket": "Full HD",
+    "Etiket": "Full HD (1920x1080)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 1920,
     "Yukseklik": 1200,
-    "Etiket": "WUXGA",
+    "Etiket": "WUXGA (1920x1200)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 2048,
     "Yukseklik": 1152,
-    "Etiket": "QWXGA",
+    "Etiket": "QWXGA (2048x1152)",
     "Grup": "Masaüstü"
   },
   {
     "Genislik": 2560,
     "Yukseklik": 1080,
-    "Etiket": "UW-FHD",
+    "Etiket": "UW-FHD (2560x1080)",
     "Grup": "Geniş Ekran"
   },
   {
     "Genislik": 2560,
     "Yukseklik": 1440,
-    "Etiket": "QHD",
+    "Etiket": "QHD (2560x1440)",
     "Grup": "Geniş Ekran"
   },
   {
     "Genislik": 2560,
     "Yukseklik": 1600,
-    "Etiket": "WQXGA",
+    "Etiket": "WQXGA (2560x1600)",
     "Grup": "Geniş Ekran"
   },
   {
     "Genislik": 3440,
     "Yukseklik": 1440,
-    "Etiket": "UW-QHD",
+    "Etiket": "UW-QHD (3440x1440)",
     "Grup": "Geniş Ekran"
   },
   {
     "Genislik": 3840,
     "Yukseklik": 2160,
-    "Etiket": "4K UHD",
+    "Etiket": "4K UHD (3840x2160)",
     "Grup": "4K"
   },
   {
     "Genislik": 4096,
     "Yukseklik": 2160,
-    "Etiket": "4K DCI",
+    "Etiket": "4K DCI (4096x2160)",
     "Grup": "4K"
   },
   {
     "Genislik": 5120,
     "Yukseklik": 2880,
-    "Etiket": "5K",
+    "Etiket": "5K (5120x2880)",
     "Grup": "5K+"
   },
   {
     "Genislik": 7680,
     "Yukseklik": 4320,
-    "Etiket": "8K UHD",
+    "Etiket": "8K UHD (7680x4320)",
     "Grup": "5K+"
   }
 ]
